@@ -7,14 +7,21 @@
         name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- displays site properly based on user's device -->
 
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link
+        rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+        <!-- Import Red Hat Display fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="./style.css">
 
         <title>Frontend Mentor | Order summary card</title>
     </head>
 
     <body>
-        <div class="wrapper">
+        <div class="container">
 
             <main>
                 <header class="header-banner"></header>
@@ -22,9 +29,13 @@
                 <article>
                     <h2 class="order-summary">Order Summary</h2>
                     <p class="order-info">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-                    <h5 class="plan-header">Annual Plan</h5>
-                    <p class="plan-info">$59.99/year</p>
-                    <p class="change">Change</p>
+
+                    <div class="annual-plan">
+                        <h5 class="plan-header">Annual Plan</h5>
+                        <p class="plan-info">$59.99/year</p>
+                        <p class="change">Change</p>
+                    </div>
+
                     <button class="payment-button">Proceed to Payment</button>
                     <p class="cancel-order">Cancel Order</p>
                 </article>
