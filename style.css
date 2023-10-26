@@ -7,73 +7,118 @@
 
 body {
     font-family: 'Red Hat Display', sans-serif;
-    /* background-image: url("./images/pattern-background-desktop.svg"); */
-}
-
-.main {
-    width: 100%;
-    /* border-radius: 25px; */
-    border: 2px solid black;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    /* display: grid;
+    place-items: center;
+    min-height: 100vh; */
 }
 
 .container {
-    width: 265px;
+    width: 300px;
     margin: auto;
     margin-top: 100px;
 }
 
+.main {
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+}
+
+
 .header-banner {
     width: 100%;
+    border-radius: 25px 25px 0 0;
 }
 
 .order-summary {
     color: hsl(223, 47%, 23%);
+    font-weight: 900;
     font-size: 18px;
     text-align: center;
-    font-weight: 900;
     margin: 20px 0;
 }
 
 .order-info {
     text-align: center;
     color: hsl(224, 23%, 55%);
-    font-size: 12px;
     font-weight: 500;
+    font-size: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
     margin-bottom: 20px;
 }
 
 .annual-plan {
     background-color: hsl(225, 100%, 98%);
-    /* display: inline-block; */
+    display: grid;
+    grid-template-columns: auto auto;
     width: 80%;
     font-size: 12px;
-    margin: 25px;
+    margin-bottom: 25px;
     border-radius: 10px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
 }
 
-.music-icon,
-.plan-header,
-.change {
-    display: inline-block;
+.annual-plan-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+}
+
+.plan-header {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.plan-price {
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
 }
 
 .music-icon {
-    margin: 10px;
+    height: 40px;
+    width: 40px;
 }
 
-.change {}
+.change {
+    text-align: right;
+}
+
+.change:active {
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+}
 
 .payment-button {
+    display: block;
+    width: 80%;
+    font-size: 12px;
+    font-weight: 700;
     color: white;
     background-color: hsl(245, 75%, 52%);
-    width: 80%;
-    margin-left: 30px;
-    font-size: 12px;
+    border: none;
     border-radius: 10px;
     padding: 10px 0;
-    margin-bottom: 20px;
-    /* margin-left: auto;
-    margin-right: auto; */
+    margin: 0 auto 20px auto;
+    cursor: pointer;
+}
+
+.payment-button:active {
+    cursor: pointer;
+    opacity: 50%;
 }
 
 .cancel-order {
@@ -81,7 +126,14 @@ body {
     color: hsl(224, 23%, 55%);
     font-weight: 700;
     font-size: 12px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.cancel-order:active {
+    cursor: pointer;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
 }
 
 .attribution {
